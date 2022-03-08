@@ -1,5 +1,6 @@
 FROM python:3
 
-CMD ["main.py"]
+ADD main.py /
 
-RUN python3 /var/lib/jenkins/workspace/sample-test/main.py
+RUN pip install pystrich
+CMD ["python3", "./main.py"]
