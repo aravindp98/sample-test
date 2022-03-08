@@ -1,6 +1,6 @@
 FROM python:3
 
-ADD main.py /
+WORKDIR /var/lib/jenkins/workspace/sample-test/
 
 RUN pip install pystrich
 CMD ["python3", "./main.py"]
