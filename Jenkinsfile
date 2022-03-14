@@ -21,8 +21,12 @@ pipeline{
 	 stage("Image pull"){
 	    steps{
 		    sh 'docker pull aravindepic/samplecode'
-			sh 'docker run -it aravindepic/samplecode'
 			}
+			}
+	 stage("container-run"){
+	   steps{
+	      sh 'docker run -t aravindepic/samplecode'
+		    }
 			}
 			}
 			 post{
