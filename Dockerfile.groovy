@@ -1,6 +1,8 @@
-FROM ubuntu:20.04 
+FROM python:3 
 
-ARG DEBIAN_FRONTEND=noninteractive
-RUN apt-get update && apt-get install apache2 -y
+WORKDIR /devops/sample-test
 
-CMD ["echo" , "web image created"]
+COPY . .
+CMD ["main.py"]
+
+RUN python3 /sample-test/main.py
