@@ -2,4 +2,4 @@ FROM python:3
 
 RUN pip install pystrich
 
-CMD ["python", "main.py"]
+RUN python3 main.py
