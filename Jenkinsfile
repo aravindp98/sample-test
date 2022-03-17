@@ -25,7 +25,7 @@ pipeline{
 			}
 	 stage("container-run"){
 	   steps{
-	      sh 'docker run -t aravindepic/samplecode'
+	      sh 'python3 main.py'
 		    }
 			}
 			}
