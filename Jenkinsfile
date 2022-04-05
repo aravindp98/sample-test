@@ -21,7 +21,11 @@ pipeline{
 	 stage("Image pull"){
 	    steps{
 		    sh 'docker pull aravindepic/samplecode'
+<<<<<<< HEAD
             }
+=======
+			}
+>>>>>>> b95875131a53d77a02a99975b25e8dc43ec3d9a3
 			}
 	 stage("container-run"){
 	   steps{
