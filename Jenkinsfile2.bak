@@ -8,14 +8,12 @@ pipeline{
 	}
 	stage('test'){
 	   steps{
-	      sh " set -e \
-		  pip install nose coverage nosexcover pylint " 
+	      sh " pip install nose coverage nosexcover pylint " 
 			   }
 			   }
 	stage('codecoverage'){
 	  steps{
-	    sh " set -e \
-		     nosetests -sv --with-xunit --xunit-file=nosetests.xml --with-xcoverage --xcoverage-file=coverage.xml"
+	    sh " nosetests -sv --with-xunit --xunit-file=nosetests.xml --with-xcoverage --xcoverage-file=coverage.xml"
 			 }
 			 }
         stage('SonarQube analysis') {
