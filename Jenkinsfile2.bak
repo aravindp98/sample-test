@@ -13,7 +13,7 @@ pipeline{
 			   }
 	stage('codecoverage'){
 	  steps{
-	    sh " nosetests -sv --with-xunit --xunit-file=nosetests.xml --with-xcoverage --xcoverage-file=coverage.xml"
+	    sh "echo nosetests -sv --with-xunit --xunit-file=nosetests.xml --with-xcoverage --xcoverage-file=coverage.xml"
 			 }
 			 }
         stage('SonarQube analysis') {
