@@ -16,6 +16,8 @@ pipeline{
 	  steps{
 	    sh " set -e \
 		     nosetests -sv --with-xunit --xunit-file=nosetests.xml --with-xcoverage --xcoverage-file=coverage.xml"
+			 }
+			 }
         stage('SonarQube analysis') {
 		  environment{
 		    sonarHome = tool 'SonarQubeScanner'
