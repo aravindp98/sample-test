@@ -6,11 +6,12 @@ pipeline{
 	checkout([$class: 'GitSCM', branches: [[name: '*/docker-sample']], extensions: [], userRemoteConfigs: [[credentialsId: 'd1a8d5f6-ee90-4f0c-af7d-8e01131fb41f', url: 'https://github.com/aravindp98/sample-test.git']]])
 	}
 	}
-	stage('code-analysis'){
-	 scannerHome = tool 'SonarQubeScanner'
-	 withSonarQubeEnv('sonar'){
-	  steps{
-	   sh "${scannerHome}/bin/sonar-scanner"
+        stage('build && SonarQube analysis') {
+            steps {
+                withSonarQubeEnv('My SonarQube Server') {
+                    // Optionally use a Maven environment you've configured already
+                    withMaven(maven:'Maven3') {
+                        sh 'mvn clean package sonar:sonar
 	   }
 	}
 	}
