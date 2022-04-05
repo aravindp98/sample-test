@@ -12,7 +12,13 @@ pipeline{
 			}
             steps {
                 withSonarQubeEnv('sonar') {
-                        sh 'mvn clean package sonar:sonar'
+                        sh '''$sonarHome/bin/sonar-scanner \
+                             -Dsonar.projectKey=mycode \
+                             -Dsonar.projectName=sample-test \
+							 -Dsonar.projectVersion=1.0 \
+                             -Dsonar.sources=.\
+                             -Dsonar.language=py \
+                             -Dsonar.sourceEncoding=UTF-8
 	   }
 	}
 	}
