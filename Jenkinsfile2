@@ -13,7 +13,7 @@ pipeline{
 			   }
 			   stage('coverage'){
 			   environment{
-			     PATH = /var/lib/jenkins/workspace/sonar-python
+			     PATH = " /var/lib/jenkins/workspace/sonar-python "
 				 }
 			   steps{
 			     script{
