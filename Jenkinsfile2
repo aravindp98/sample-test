@@ -8,7 +8,7 @@ pipeline{
 	}
 	stage('test'){
 	   steps{
-	      sh " pip install nose coverage nosexcover pylint "
+	      sh " pip install python-nose coverage nosexcover pylint "
 			   }
 			   }
     stage('coverage'){
