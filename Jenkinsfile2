@@ -9,7 +9,8 @@ pipeline{
 	stage('test'){
 	   steps{
 	      sh " pip install nose coverage nosexcover pylint " 
-		  sh " cd /var/lib/jenkins/workspace/sonar-python nosetests -w /var/lib/jenkins/workspace/sonar-python --with-xunit --xunit-file=nosetests.xml --with-xcoverage --xcoverage-file=coverage.xml "
+		  sh " cd /var/lib/jenkins/workspace/sonar-python \
+		       nosetests -sv --with-xunit --xunit-file=nosetests.xml --with-xcoverage --xcoverage-file=coverage.xml "
 			   }
 			   }
 			   
