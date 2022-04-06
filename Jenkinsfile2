@@ -14,6 +14,7 @@ pipeline{
 			   stage('coverage'){
 			   environment{
 			     PATH = /var/lib/jenkins/workspace/sonar-python
+				 }
 			   steps{
 			     script{
 				  sh " nosetests -w $PATH --with-xunit --xunit-file=nosetests.xml --with-xcoverage --xcoverage-file=coverage.xml "
