@@ -14,6 +14,7 @@ pipeline{
     stage('coverage'){
 	    steps{
 		  script{
+		  sh " chmod +x /var/lib/jenkins/workspace/soar-python/main.py "
 		  sh " nosetests --with-xunit /var/lib/jenkins/workspace/soar-python/main.py "
 				 }
 				 }
