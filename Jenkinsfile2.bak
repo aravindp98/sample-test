@@ -14,7 +14,8 @@ pipeline{
     stage('coverage'){
 	    steps{
 		  script{
-		  sh " sfdx force:apex: test :run -c -d . -r json --wait 4 "
+		  sh " coverage run --branch --source=/var/lib/jenkins/.local/lib/python3.8/site-packages \
+		         coverage xml -i "
 				 }
 				 }
 				 }

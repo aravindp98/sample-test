@@ -14,7 +14,7 @@ pipeline{
     stage('coverage'){
 	    steps{
 		  script{
-		  sh " coverage run --branch --source=/var/lib/jenkins/.local/lib/python3.8/site-packages \
+		  sh " coverage run --branch --source=/var/lib/jenkins/workspace/sonar-python \
 		         coverage xml -i "
 				 }
 				 }
