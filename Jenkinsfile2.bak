@@ -14,7 +14,7 @@ pipeline{
     stage('coverage'){
 	    steps{
 		  script{
-		    sh " nosetests -w /var/lib/jenkins/workspace/sonar-python/main.py"
+		    sh " nosetests -w /var/lib/jenkins/workspace/sonar-python/main.py --with-xunit --xunit-file=nosetests.xml --with-xcoverage --xcoverage-file=coverage.xml"
 				 }
 				 }
 				 }
