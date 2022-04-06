@@ -15,7 +15,7 @@ pipeline{
 	    steps{
 		  script{
 		  sh " nosetests --with-xunit --xunit-file=nosetests.xml  "
-		  sh " coverage --with-xcoverage --xcoverage-file=coverage.xml "
+		  sh " coverage run --with-xcoverage --xcoverage-file=coverage.xml "
 				 }
 				 }
 				 }
