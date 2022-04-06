@@ -14,7 +14,7 @@ pipeline{
     stage('coverage'){
 	    steps{
 		  script{ 
-		  sh " nosetests --with-coverage --cover-package=. --cover-branches --cover-xml "
+		  sh " nosetests --with-xunit --xunit-file=nosetests.xml --with-coverage --cover-package=. --cover-branches --cover-xml "
 				 }
 				 }
 				 }
