@@ -32,7 +32,8 @@ pipeline{
                              -Dsonar.language=py \
                              -Dsonar.sourceEncoding=UTF-8 \
 							 -Dsonar.python.xunit.reportPath=nosetests.xml \
-							 -Dsonar.python.coverage.reportPaths=coverage.xml'''
+							 -Dsonar.python.coverage.reportPaths=coverage.xml \
+							 -Dsonar.coverage.exclusions=script/** '''
 	   }
 	}
 	}
