@@ -33,7 +33,7 @@ pipeline{
                              -Dsonar.sourceEncoding=UTF-8 \
 							 -Dsonar.python.xunit.reportPath=nosetests.xml \
 							 -Dsonar.python.coverage.reportPaths=coverage.xml \
-							 -Dsonar.coverage.exclusions=script/** '''
+							 -Dsonar.coverage.exclusions=coverage.xml'''
 	   }
 	}
 	}
