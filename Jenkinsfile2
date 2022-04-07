@@ -11,13 +11,10 @@ pipeline{
 	      sh " pip install nose coverage nosexcover pylint "
 			   }
 			   }
-    stage('coverage'){
-	    steps{
-		  script{ 
-		  sh " nosetests --with-xunit --xunit-file=nosetests.xml --with-coverage --cover-package=. --cover-branches --cover-xml "
-				 }
-				 }
-				 }
+    //stage('coverage'){
+	   // steps{
+		//  script{ 
+		//  sh " nosetests --with-xunit --xunit-file=nosetests.xml --with-coverage --cover-package=. --cover-branches --cover-xml "
      stage('SonarQube analysis') {
 		  environment{
 		    sonarHome = tool 'SonarQubeScanner'
