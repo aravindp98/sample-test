@@ -23,7 +23,6 @@ pipeline{
 		    sh 'docker pull aravindepic/samplecode'
             }
 			}
-			}
 	 stage("container-run"){
 	   steps{
 	      sh 'python3 main.py'
@@ -35,3 +34,4 @@ pipeline{
                  sh 'docker logout'
              }
          }
+}
