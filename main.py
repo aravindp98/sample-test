@@ -1,5 +1,5 @@
 #simple code
 x = 10
 y = 20
-total = x + y:
+total = x + y
 print(total)
